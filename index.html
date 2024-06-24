@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <title>Contact form</title>
+  </head>
+  <body>
+    <section
+      class="contact-form bg-Green-200 h-screen flex items-center justify-center relative">
+      <!-- Alert successfully -->
+
+      <div
+        class="absolute top-4 bg-Grey-900 py-3 px-8 rounded-lg opacity-0 hidden"
+        id="success_alert">
+        <div class="flex items-center text-white mb-1">
+          <div class="mr-3">
+            <img src="./images/icon-success-check.svg" alt="image" />
+          </div>
+          <div class="text-lg">Message Sent!</div>
+        </div>
+        <div>
+          <p class="text-White text-xs font-thin">
+            Thanks for Completing the form. we'll be in touch soon!
+          </p>
+        </div>
+      </div>
+
+      <!-- Alert successfully End -->
+      <div class="bg-White xl:w-2/5 lg:w-2/3 h-auto rounded-xl">
+        <form action="" class="px-7 py-4">
+          <div class="mb-2">
+            <h3 class="mb-4 text-2xl font-semibold">Contact Us</h3>
+            <div>
+              <div class="mb-1 flex w-full">
+                <div class="flex flex-col mr-3 w-full">
+                  <label for="firstName" class="text-sm"
+                    >First Name <span>*</span></label
+                  >
+                  <input
+                    type="text"
+                    name="firstName"
+                    class="hover:border-green-600 focus:border-green-600 border-gray-400 outline-none border rounded p-2 mt-2 w-full" />
+                  <p id="error1" class="mt-1 text-sm text-Red">
+                    This field is required
+                  </p>
+                </div>
+                <div class="flex flex-col w-full">
+                  <label for="LastName" class="text-sm"
+                    >Last Name <span>*</span></label
+                  >
+                  <input
+                    type="text"
+                    name="lastName"
+                    class="hover:border-green-600 focus:border-green-600 border-gray-400 outline-none border rounded p-2 mt-2 w-full" />
+                  <p id="error2" class="mt-1 text-sm text-Red">
+                    This field is required
+                  </p>
+                </div>
+              </div>
+
+              <div class="mb-1">
+                <label for="email" class="text-sm"
+                  >Email Address <span>*</span></label
+                >
+                <input
+                  type="email"
+                  class="hover:border-green-600 focus:border-green-600 border-gray-400 outline-none border rounded p-2 mt-2 w-full" />
+                <p id="error3" class="mt-1 text-sm text-Red">
+                  Please enter a valid email address
+                </p>
+              </div>
+
+              <div class="mb-1">
+                <label for="query" class="text-sm"
+                  >Query Type <span>*</span></label
+                >
+                <div class="flex items-center mt-2">
+                  <div
+                    class="w-full py-2 px-4 border border-gray-400 rounded-sm mr-3 flex items-center hover:border-green-600 focus:border-green-600"
+                    id="generalInput">
+                    <input
+                      class="mr-3"
+                      type="checkbox"
+                      name="general"
+                      id="general" />
+                    <span class="text-sm">General Enquiry</span>
+                  </div>
+                  <div
+                    class="w-full py-2 px-4 border border-gray-400 rounded-sm flex items-center hover:border-green-600 focus:border-green-600"
+                    id="supportInput">
+                    <input
+                      class="mr-3"
+                      type="checkbox"
+                      name="support"
+                      id="support" />
+                    <span class="text-sm">Support Request</span>
+                  </div>
+                </div>
+                <p id="error4" class="mt-1 text-sm text-Red">
+                  Please select a query type
+                </p>
+              </div>
+
+              <div class="mb-1">
+                <label for="message">Message <span>*</span></label>
+                <textarea
+                  name="message"
+                  id="message"
+                  class="border-gray-400 outline-none border rounded p-2 mt-2 w-full"></textarea>
+                <p id="error5" class="mt-1text-sm text-Red">
+                  This field is required
+                </p>
+              </div>
+            </div>
+
+            <div class="agree mb-6">
+              <div class="flex items-center">
+                <input type="checkbox" name="agree" id="agree" />
+                <p class="ml-3">
+                  I consent to being contacted by the team <span>*</span>
+                </p>
+              </div>
+              <p id="error6" class="mt-1 text-sm text-Red">
+                To submit this form, please consent to being contacted
+              </p>
+            </div>
+            <button
+              type="submit"
+              id="submit_btn"
+              class="w-full rounded-md text-center bg-Green-600 text-White py-2 hover:bg-Grey-900">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
